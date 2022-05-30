@@ -23,6 +23,8 @@ html {
           box-sizing: inherit;
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -90,6 +92,7 @@ button {
 }
 
 .box {
+  position: relative;
   margin: 0 auto;
   background-color: white;
   width: 60vw;
@@ -299,10 +302,11 @@ button {
 }
 
 .box #div-introducao #div-texto-introducao {
-  font-size: 2.2rem;
-  line-height: 4rem;
+  font-size: 3rem;
+  line-height: 5rem;
   text-align: center;
   color: #111111;
+  padding: 1rem;
 }
 
 .box #div-introducao #div-numero-de-perguntas {
@@ -618,6 +622,16 @@ button {
   background: #555;
 }
 
+.animacao-cabelo {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+  top: 7%;
+  left: 5%;
+  width: 200px;
+  height: 200px;
+}
+
 @media (max-width: 800px) {
   .box {
     width: 90%;
@@ -652,6 +666,25 @@ button {
   }
   .box .div-botao .alerta {
     font-size: 2vw;
+  }
+  .box #div-introducao {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 1rem 2rem;
+  }
+  .box #div-introducao #div-texto-introducao {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  .animacao-cabelo {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 40%;
   }
   .resultados {
     width: 95%;

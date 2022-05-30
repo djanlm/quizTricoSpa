@@ -33,6 +33,7 @@
 }
 
 .box {
+  position: relative;
   margin: 0 auto;
   background-color: white;
   width: 60vw;
@@ -197,11 +198,12 @@
       max-width: 100%;
     }
     #div-texto-introducao {
-      font-size: 2.2rem;
-      line-height: 4rem;
+      font-size: 3rem;
+      line-height: 5rem;
       text-align: center;
       //color: #1d1941;
       color: #111111;
+      padding: 1rem;
     }
 
     #div-numero-de-perguntas {
@@ -437,6 +439,15 @@
   background: #555;
 }
 
+.animacao-cabelo {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 7%;
+  left: 5%;
+  width: 200px;
+  height: 200px;
+}
+
 @media (max-width: 800px) {
   .box {
     width: 90%;
@@ -476,6 +487,26 @@
         font-size: 2vw;
       }
     }
+
+    #div-introducao {
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem 2rem;
+
+      #div-texto-introducao {
+        font-size: 3rem;
+        line-height: 4rem;
+        //padding: 2rem 0 1rem 0;
+      }
+    }
+  }
+
+  .animacao-cabelo {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 40%;
   }
 
   .resultados {

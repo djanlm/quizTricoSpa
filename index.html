@@ -19,17 +19,16 @@
     <title>Questionário Trico Spa</title>
   </head>
   <body>
-    <div id="div-teste-button" >
-      <button >INICIAR TESTE</button>
+    <div id="div-teste-button">
+      <button>INICIAR TESTE</button>
     </div>
     <div class="container-questionario oculta">
       <form action="" id="form-questionario">
-
         <div class="box oculta">
           <div class="div-pergunta" id="div-introducao">
             <img src="./img/logoQuestionario.png" alt="tricoSpa logo" />
             <div id="div-texto-introducao">
-              Questionário Trico Spa - Centro de Tratamento Capilar
+              Descubra Seu Cronograma Capilar Ideal
             </div>
             <div id="div-numero-de-perguntas"></div>
           </div>
@@ -39,10 +38,18 @@
               id="botao-comecar"
               onclick="iniciarQuestionario()"
             >
-              COMEÇAR A PERSONALIZAÇÃO
+              COMECE AGORA!
               <i class="fa fa-arrow-right" aria-hidden="true"></i>
             </button>
           </div>
+          <lottie-player
+            class="animacao-cabelo"
+            src="./script/animacaoCabelo.json"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay
+          ></lottie-player>
         </div>
 
         <div class="box oculta">
@@ -1189,7 +1196,7 @@
 
         <div class="box oculta">
           <div class="div-pergunta">
-            <p>Para finalizar o questionário, responda:</p>
+            <p>Receba seu cronograma no e-mail para tê-lo sempre com você!</p>
             <label for="nome">Qual seu nome?</label>
             <input
               type="text"
@@ -1222,7 +1229,9 @@
       </form>
 
       <div class="resultados oculta">
-        <div id="close-button"><i class="fa fa-times" aria-hidden="true"></i></i></div>
+        <div id="close-button">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
         <p>
           De acordo com suas respostas, esses são os produtos indicados para
           você:
@@ -1361,7 +1370,7 @@
         </div>
       </div>
     </div>
-
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./script/script.js"></script>
   </body>
