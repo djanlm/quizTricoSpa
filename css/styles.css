@@ -1,0 +1,698 @@
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 81.25%;
+  }
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  line-height: 1.6rem;
+  width: 100%;
+  max-width: 1920px;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+
+#div-teste-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+#div-teste-button button {
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  text-decoration: none;
+  border-radius: 2rem;
+}
+
+#div-teste-button button:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.container-questionario {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+}
+
+.box {
+  margin: 0 auto;
+  background-color: white;
+  width: 60vw;
+  max-width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.box .div-pergunta {
+  padding: 2rem 2rem 1rem 2rem;
+  max-height: 60vh;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.box .div-pergunta > p {
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.9);
+  margin-bottom: 1rem;
+}
+
+.box .div-pergunta > span {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 1rem;
+}
+
+.box .div-pergunta input[type="text"],
+.box .div-pergunta input[type="email"] {
+  margin: 1rem 0 1rem 0;
+  padding: 0.8rem;
+  width: 100%;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.2rem;
+  font-size: 1.2rem;
+}
+
+.box .div-pergunta input[type="text"]:focus,
+.box .div-pergunta input[type="email"]:focus {
+  outline: 1px solid rgba(115, 208, 242, 0);
+  -webkit-box-shadow: 0px 0px 6px #8cc9ff;
+          box-shadow: 0px 0px 6px #8cc9ff;
+  /* box-shadow: 1px 1px 1px 0 rgb(115, 208, 242),
+        0 1px 1px 0 rgb(115, 208, 242);*/
+}
+
+.box .div-pergunta .all-radios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /* display: grid;
+      grid-template-columns: 25% 25% 25%;
+      grid-template-rows: auto auto;
+      justify-content: space-around; 
+      column-gap: 10px;*/
+  margin-top: 1rem;
+}
+
+.box .div-pergunta .div-radio-button {
+  position: relative;
+  width: 22%;
+  margin: 0 0 1rem 0;
+  gap: 1rem;
+}
+
+.box .div-pergunta .div-radio-button label {
+  border: 1px solid rgba(0, 0, 0, 0.19);
+  border-radius: 0.3rem;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+  display: inline-block;
+  cursor: pointer;
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
+}
+
+.box .div-pergunta .div-radio-button label:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.box .div-pergunta .div-radio-button input[type="checkbox"],
+.box .div-pergunta .div-radio-button input[type="radio"] {
+  height: 20%;
+  aspect-ratio: 1/1;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.box .div-pergunta .div-radio-button input[type="checkbox"]:checked + label,
+.box .div-pergunta .div-radio-button input[type="radio"]:checked + label {
+  /*background-color: #d7ebff;
+        border: 1px solid #5badfe;*/
+  background-color: #cccccc;
+  border: 1px solid #666666;
+}
+
+.box .div-pergunta .div-radio-button .div-radio-button-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box .div-pergunta .div-radio-button .div-radio-button-content img {
+  width: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.box .div-pergunta .div-radio-button .div-radio-button-content span {
+  font-size: 0.9rem;
+  line-height: normal;
+  text-align: center;
+}
+
+.box .div-pergunta .div-checkbox-button {
+  position: relative;
+  width: 40%;
+  margin: 0 0 1rem 0;
+  gap: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box .div-pergunta .div-checkbox-button:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.box .div-pergunta .div-checkbox-button label {
+  display: inline-block;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.19);
+  border-radius: 0.3rem;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+  cursor: pointer;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+}
+
+.box .div-pergunta .div-checkbox-button input[type="checkbox"] {
+  position: absolute;
+  left: 0.5rem;
+}
+
+.box .div-pergunta .div-checkbox-button input[type="checkbox"]:checked + label {
+  /* background-color: #d7ebff;
+        border: 1px solid #5badfe; */
+  background-color: #cccccc;
+  border: 1px solid #666666;
+}
+
+.box #div-introducao {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Roboto", sans-serif;
+  padding: 3rem 4rem 1.5rem 4rem;
+}
+
+.box #div-introducao img {
+  display: inline-block;
+  margin: 0;
+  max-height: 90px;
+  max-width: 100%;
+}
+
+.box #div-introducao #div-texto-introducao {
+  font-size: 2.2rem;
+  line-height: 4rem;
+  text-align: center;
+  color: #111111;
+}
+
+.box #div-introducao #div-numero-de-perguntas {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.box .div-botao {
+  height: 56px;
+  background-color: #000000;
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.box .div-botao .alerta {
+  position: absolute;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 60%;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  border-radius: 0.3rem;
+  font-size: 1vw;
+  padding: 0 1rem;
+}
+
+.box .div-botao .botao-guia {
+  width: auto;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  padding: 0 1.5rem 0 1.5rem;
+}
+
+.box .div-botao .botao-guia-anterior {
+  text-align: left;
+  color: #b9b9b9;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.box .div-botao .botao-guia-anterior:hover {
+  color: white;
+}
+
+.box .div-botao .botao-guia-anterior i {
+  margin-right: 1rem;
+}
+
+.box .div-botao .botao-guia-proximo {
+  text-align: right;
+}
+
+.box .div-botao .botao-guia-proximo i {
+  margin-left: 1rem;
+}
+
+.box .div-botao .botao-guia-proximo:hover i {
+  -webkit-animation-name: bounce-horizontal;
+          animation-name: bounce-horizontal;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes bounce-horizontal {
+  0% {
+    -webkit-transform: scale(1, 1) translateX(0);
+            transform: scale(1, 1) translateX(0);
+  }
+  10% {
+    -webkit-transform: scale(1.1, 0.9) translateX(0);
+            transform: scale(1.1, 0.9) translateX(0);
+  }
+  30% {
+    -webkit-transform: scale(0.9, 1.1) translateX(10px);
+            transform: scale(0.9, 1.1) translateX(10px);
+  }
+  50% {
+    -webkit-transform: scale(1, 1) translateX(0);
+            transform: scale(1, 1) translateX(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateX(7px);
+            transform: scale(1, 1) translateX(7px);
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateX(2px);
+            transform: scale(1, 1) translateX(2px);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateX(0);
+            transform: scale(1, 1) translateX(0);
+  }
+}
+
+@keyframes bounce-horizontal {
+  0% {
+    -webkit-transform: scale(1, 1) translateX(0);
+            transform: scale(1, 1) translateX(0);
+  }
+  10% {
+    -webkit-transform: scale(1.1, 0.9) translateX(0);
+            transform: scale(1.1, 0.9) translateX(0);
+  }
+  30% {
+    -webkit-transform: scale(0.9, 1.1) translateX(10px);
+            transform: scale(0.9, 1.1) translateX(10px);
+  }
+  50% {
+    -webkit-transform: scale(1, 1) translateX(0);
+            transform: scale(1, 1) translateX(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateX(7px);
+            transform: scale(1, 1) translateX(7px);
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateX(2px);
+            transform: scale(1, 1) translateX(2px);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateX(0);
+            transform: scale(1, 1) translateX(0);
+  }
+}
+
+.box .div-botao #botao-comecar {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.box .div-botao #botao-comecar i {
+  margin-left: 1rem;
+}
+
+.box .div-botao #botao-comecar:hover i {
+  -webkit-animation-name: bounce-horizontal;
+          animation-name: bounce-horizontal;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.box .div-botao #botao-enviar {
+  text-align: right;
+}
+
+.box .div-botao #botao-enviar:hover {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+}
+
+.box .div-botao #botao-enviar:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.resultados {
+  margin: 0 auto;
+  background-color: #ffffff;
+  height: 80%;
+  width: 70%;
+  overflow-y: auto;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.resultados #close-button {
+  position: absolute;
+  right: 4%;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  cursor: pointer;
+}
+
+.resultados #close-button:hover {
+  -webkit-transform: scale(2, 2);
+          transform: scale(2, 2);
+  color: #666;
+}
+
+.resultados p {
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+  font-weight: 300;
+}
+
+.resultados .produtos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 1rem;
+}
+
+.resultados .produtos .card-produto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 90%;
+  max-width: 300px;
+  height: 400px;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1), 0 0 6px 0 rgba(0, 0, 0, 0.09);
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1), 0 0 6px 0 rgba(0, 0, 0, 0.09);
+  margin-bottom: 2rem;
+  -webkit-transition: margin-top 0.2s ease-in;
+  transition: margin-top 0.2s ease-in;
+}
+
+.resultados .produtos .card-produto:hover {
+  margin-top: -1rem;
+}
+
+.resultados .produtos .card-produto img {
+  width: 60%;
+  margin-bottom: 1rem;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+.resultados .produtos .card-produto img:hover {
+  width: 80%;
+}
+
+.resultados .produtos .card-produto span {
+  font-weight: 300;
+}
+
+.resultados .produtos .oculta {
+  display: none;
+}
+
+.animate-alerta {
+  -webkit-animation-name: bounce-horizontal;
+          animation-name: bounce-horizontal;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+.oculta {
+  display: none;
+}
+
+.checked-radio {
+  background-color: #cacaf5;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media (max-width: 800px) {
+  .box {
+    width: 90%;
+    max-width: 768px;
+    height: 85vh;
+    margin-bottom: 56px;
+  }
+  .box .div-pergunta {
+    max-height: 100%;
+  }
+  .box .div-pergunta .div-radio-button {
+    width: 40%;
+    margin: 0 0 1rem 0;
+  }
+  .box .div-pergunta .div-checkbox-button {
+    position: relative;
+    width: 45%;
+    margin: 0 0 1rem 0;
+    gap: 0.5rem;
+  }
+  .box .div-pergunta .div-checkbox-button label {
+    overflow-x: hidden;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+  }
+  .box .div-pergunta .div-checkbox-button input[type="checkbox"] {
+    left: 0.3rem;
+  }
+  .box .div-botao {
+    position: fixed;
+    border-radius: 0;
+    bottom: 0;
+  }
+  .box .div-botao .alerta {
+    font-size: 2vw;
+  }
+  .resultados {
+    width: 95%;
+    -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2), 0 0 8px 0 rgba(0, 0, 0, 0.19);
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2), 0 0 8px 0 rgba(0, 0, 0, 0.19);
+  }
+  .resultados p {
+    padding-right: 2rem;
+  }
+  .resultados .produtos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .resultados .produtos .card-produto {
+    width: 90%;
+    height: auto;
+    max-width: none;
+    aspect-ratio: 3/4;
+  }
+  .resultados .produtos .card-produto img {
+    width: 60%;
+    margin-bottom: 1rem;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+  }
+  .resultados .produtos .card-produto img:hover {
+    width: 80%;
+  }
+  .resultados .produtos .card-produto span {
+    font-weight: 300;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
