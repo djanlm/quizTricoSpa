@@ -392,71 +392,54 @@ function populateArrayDeProdutos() {
   if (feminino.checked) {
     addProteina();
     addVitaminasMulher();
+    addTonico();
 
     if (liso.checked) {
     } else if (ondulado.checked) {
     } else if (crespo.checked) {
     } else if (curto.checked) {
-      addShampooEnergizante();
+      addShampooEstimulante();
       addCondicionadorHydrabalm();
       addLeaveIn();
-      addTonico();
     }
     if (fioRessecado.checked) {
-      addProteina();
-      addShampooCabelosSecosESensiveis();
-      addShampooDanificados();
-      addCondicionadorHydrabalm();
-      addEnergyPower();
     } else if (fioNormal.checked) {
-      addCondicionadorNeutrum();
-      addCondicionadorEnergizante();
-      addMascaraHydraBalm();
-      addLeaveIn();
     } else if (fioCurto.checked) {
     } else if (fioNaoHidratado.checked) {
     }
 
     if (raizOleosa.checked) {
-      addShampooNeutrum();
+      addShampooEstimulante();
       addCondicionadorDanificados();
       addLeaveIn();
-      addTonico();
     } else if (raizNormal.checked) {
-      addShampooNeutrum();
     }
 
     if (coceira.checked) {
-      addShampooCremeDeLimpeza3Em1();
+      addShampooEstimulante();
       addMascaraRefreshScalp();
-      addTonico();
-      addShampooCremeDeLimpeza3Em1();
     }
 
     if (oleosidade.checked) {
-      addShampooEnergizante();
+      addShampooEstimulante();
       addCondicionadorHydrabalm();
       addLeaveIn();
-      addTonico();
     }
 
     if (feridas.checked) {
-      addShampooCremeDeLimpeza3Em1();
     }
 
     if (caspa.checked || ardencia.checked) {
+      addShampooEstimulante();
       addMascaraRefreshScalp();
-      addTonico();
-      addShampooCremeDeLimpeza3Em1();
     }
 
     if (queda.checked) {
     }
 
     if (descamacao.checked) {
-      addShampooCremeDeLimpeza3Em1();
+      addShampooEstimulante();
       addMascaraRefreshScalp();
-      addTonico();
     }
 
     if (antiFrizz.checked) {
@@ -474,21 +457,18 @@ function populateArrayDeProdutos() {
       addKitSOS();
     }
     if (crescimento.checked) {
-      addShampooEnergizante();
     }
     if (hidratacao.checked) {
     }
 
     if (controleDescamacao.checked) {
-      addShampooEstimulanteOrShampooCremeDeLimpeza();
+      //addShampooEstimulanteOrShampooCremeDeLimpeza();
     }
 
     if (prevencaoQueda.checked) {
-      addTonico();
     }
   } else if (masculino.checked) {
     ///////////// homens
-    addVitaminasHomem();
     addTonico();
 
     if (liso.checked) {
@@ -498,67 +478,54 @@ function populateArrayDeProdutos() {
     }
 
     if (fioRessecado.checked) {
-      addProteina();
-      addShampooCabelosSecosESensiveis();
-      addShampooDanificados();
-      addCondicionadorHydrabalm();
-      addEnergyPower();
     } else if (fioNormal.checked) {
-      addCondicionadorNeutrum();
-      addCondicionadorEnergizante();
-      addMascaraHydraBalm();
-      addLeaveIn();
     } else if (fioCurto.checked) {
     } else if (fioNaoHidratado.checked) {
     }
     if (raizOleosa.checked) {
+      addShampooEstimulante();
+      addCondicionadorOleosos();
     } else if (raizNormal.checked) {
-      addShampooNeutrum();
     }
 
     if (coceira.checked) {
       addShampooEstimulante();
       addMascaraRefreshScalp();
-      addTonico();
-      addCondicionadorEnergizante();
-      addShampooCremeDeLimpeza3Em1();
+      addCondicionadorOleosos();
     }
 
     if (oleosidade.checked) {
-      addShampooGreasyHair();
-      addCondicionadorOleosos();
-      addTonico();
       addShampooEstimulante();
       addMascaraRefreshScalp();
-      addCondicionadorEnergizante();
+      addCondicionadorOleosos();
     }
 
     if (feridas.checked) {
+      addShampooEstimulante();
       addMascaraRefreshScalp();
-      addShampooCremeDeLimpeza3Em1();
+      addCondicionadorOleosos();
     }
 
     if (caspa.checked || ardencia.checked) {
+      addShampooEstimulante();
       addMascaraRefreshScalp();
-      addShampooCremeDeLimpeza3Em1();
+      addCondicionadorOleosos();
     }
 
     if (queda.checked) {
-      addTonico();
       addShampooEstimulante();
-      addCondicionadorEstimulante();
+      addCondicionadorEnergizante();
     }
 
     if (descamacao.checked) {
       addShampooEstimulante();
       addMascaraRefreshScalp();
-      addTonico();
-      addCondicionadorEnergizante();
+      addCondicionadorOleosos();
     }
 
     if (antiFrizz.checked) {
       addMascaraRefreshScalp();
-      addCondicionadorNeutrum();
+      addCondicionadorEnergizante();
     }
 
     if (fortificacaoFios.checked) {
@@ -571,7 +538,7 @@ function populateArrayDeProdutos() {
     }
     if (hidratacao.checked) {
       addMascaraRefreshScalp();
-      addCondicionadorNeutrum();
+      addCondicionadorEnergizante();
     }
     if (controleDescamacao.checked) {
     }
@@ -580,22 +547,18 @@ function populateArrayDeProdutos() {
     }
   } ///fim homens
 
-  if (
-    coloracao.checked ||
-    loiros.checked ||
-    alisamento.checked ||
-    alongamentoQueratina.checked ||
-    alongamentoFita.checked
-  ) {
-    addProteina();
-    addCondicionadorDanificados();
-    addEnergyPower();
-    addShampooDanificados();
-  }
-
-  if (calvicie.checked || parentes.checked) {
-    addTonico();
-  }
+  // if (
+  //   coloracao.checked ||
+  //   loiros.checked ||
+  //   alisamento.checked ||
+  //   alongamentoQueratina.checked ||
+  //   alongamentoFita.checked
+  // ) {
+  //   addProteina();
+  //   addCondicionadorDanificados();
+  //   addEnergyPower();
+  //   addShampooDanificados();
+  // }
 
   //remove proteina (pre-shampoo) caso cabelo oleoso esteja marcado
   if (oleosidade.checked || raizOleosa.checked) {
