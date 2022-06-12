@@ -582,6 +582,12 @@ button {
   font-weight: 300;
 }
 
+.resultados .produtos .card-produto p {
+  font-size: 0.9rem;
+  padding: 0;
+  margin: 0;
+}
+
 .resultados .produtos .oculta {
   display: none;
 }
