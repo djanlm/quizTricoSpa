@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Questionário Trico Spa</title>
+  </head>
+  <body>
+    <div id="div-teste-button">
+      <button>INICIAR TESTE</button>
+    </div>
+    <div class="container-questionario oculta">
+      <form action="" id="form-questionario">
+        <div class="box oculta">
+          <div class="div-pergunta" id="div-introducao">
+            <img
+              src="https://media2.giphy.com/media/tb5MMp6iQmhtnOafqt/giphy.gif"
+              alt="tricoSpa logo"
+            />
+            <div id="div-texto-introducao">
+              Escolha seu Cronograma Capilar Personalizado
+            </div>
+            <div id="div-numero-de-perguntas"></div>
+          </div>
+          <div class="div-botao">
+            <button
+              type="button"
+              id="botao-comecar"
+              onclick="iniciarQuestionario()"
+            >
+              COMECE AGORA!
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+          <!--  <lottie-player
+            class="animacao-cabelo"
+            src="./script/animacaoCabelo.json"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay
+          ></lottie-player>-->
+        </div>
+
+        <div class="box oculta">
+          <div class="div-pergunta">
+            <p>Qual seu sexo?</p>
+            <span>Escolha uma opção</span>
+
+            <div class="all-radios">
+              <div class="div-radio-button">
+                <input
+                  type="radio"
+                  id="feminino"
+                  name="sexo"
+                  value="feminino"
+                />
+                <label for="feminino">
+                  <div class="div-radio-button-content">
+                    <img src="./img/m.png" alt="feminino" />
+                    <span>Feminino</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="radio"
+                  id="masculino"
+                  name="sexo"
+                  value="masculino"
+                />
+                <label for="masculino">
+                  <div class="div-radio-button-content">
+                    <img src="./img/h.png" alt="masculino" />
+                    <span>Masculino</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="div-botao">
+            <button type="button" class="botao-guia botao-guia-anterior">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>ANTERIOR
+            </button>
+            <button type="button" class="botao-guia botao-guia-proximo">
+              PRÓXIMO <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+
+            <div class="alerta">Este campo é obrigatório</div>
+          </div>
+        </div>
+        <div class="box oculta">
+          <div class="div-pergunta">
+            <p>Como está a saúde do seu couro cabeludo?</p>
+            <span>Escolha as opções que se aplicam</span>
+
+            <div class="all-radios">
+              <!--   <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="coceira"
+                  name="saude"
+                  value="coceira"
+                />
+                <label for="coceira">
+                  <div class="div-radio-button-content">
+                    <img src="./img/coceira.png" alt="coceira" />
+                    <span>Coceira</span>
+                  </div>
+                </label>
+              </div>
+-->
+              <div class="div-radio-button">
+                <input type="checkbox" id="caspa" name="saude" value="caspa" />
+                <label for="caspa">
+                  <div class="div-radio-button-content">
+                    <img src="./img/caspa.png" alt="caspa" />
+                    <span>Caspa</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="feridas"
+                  name="saude"
+                  value="feridas"
+                />
+                <label for="feridas">
+                  <div class="div-radio-button-content">
+                    <img src="./img/feridas.png" alt="feridas" />
+                    <span>Feridas</span>
+                  </div>
+                </label>
+              </div>
+
+              <!--    <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="ardencia"
+                  name="saude"
+                  value="ardencia"
+                />
+                <label for="ardencia">
+                  <div class="div-radio-button-content">
+                    <img src="./img/ardencia.png" alt="ardência" />
+                    <span
+                      >Ardência, dor ou sensibilidade no couro cabeludo</span
+                    >
+                  </div>
+                </label>
+              </div>
+            -->
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="oleosidade"
+                  name="saude"
+                  value="oleosidade"
+                />
+                <label for="oleosidade">
+                  <div class="div-radio-button-content">
+                    <img src="./img/oleosidade.png" alt="oleosidade" />
+                    <span>Oleosidade</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="ressecamento"
+                  name="saude"
+                  value="ressecamento"
+                />
+                <label for="ressecamento">
+                  <div class="div-radio-button-content">
+                    <img src="./img/ressecamento.png" alt="ressecamento" />
+                    <span>Ressecamento</span>
+                  </div>
+                </label>
+              </div>
+
+              <!--    <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="descamacao"
+                  name="saude"
+                  value="descamacao"
+                />
+                <label for="descamacao">
+                  <div class="div-radio-button-content">
+                    <img src="./img/descamacao.png" alt="descamação" />
+                    <span>Descamação</span>
+                  </div>
+                </label>
+              </div>
+            -->
+              <div class="div-radio-button">
+                <input type="checkbox" id="queda" name="saude" value="queda" />
+                <label for="queda">
+                  <div class="div-radio-button-content">
+                    <img src="./img/queda.png" alt="queda capilar" />
+                    <span>Queda capilar</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="calvicie"
+                  name="saude"
+                  value="calvicie"
+                />
+                <label for="calvicie">
+                  <div class="div-radio-button-content">
+                    <img src="./img/calvice.png" alt="calvície" />
+                    <span>Calvície/ Rarefação capilar</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="nao-sei"
+                  name="saude"
+                  value="nao-sei"
+                />
+                <label for="nao-sei">
+                  <div class="div-radio-button-content">
+                    <img src="./img/into.png" alt="não sei" />
+                    <span>Não sei explicar</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="nenhum-problema"
+                  name="saude"
+                  value="nenhum-problema"
+                />
+                <label for="nenhum-problema">
+                  <div class="div-radio-button-content">
+                    <img src="./img/normal.png" alt="nenhum problema" />
+                    <span>Nenhum problema aparente</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="parentes"
+                  name="saude"
+                  value="parentes"
+                />
+                <label for="parentes">
+                  <div class="div-radio-button-content">
+                    <img src="./img/familia.png" alt="parentes" />
+                    <span>Pai, mãe ou irmãos com queda de cabelo</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="div-botao">
+            <button type="button" class="botao-guia botao-guia-anterior">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>ANTERIOR
+            </button>
+
+            <button type="button" class="botao-guia botao-guia-proximo">
+              PRÓXIMO <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+            <div class="alerta">Este campo é obrigatório</div>
+          </div>
+        </div>
+        <div class="box oculta">
+          <div class="div-pergunta">
+            <p>Como é seu cabelo?</p>
+            <span>Escolha uma opção</span>
+
+            <div class="all-radios">
+              <div class="div-radio-button">
+                <input
+                  type="radio"
+                  id="liso"
+                  name="tipo-de-cabelo"
+                  value="liso"
+                />
+                <label for="liso">
+                  <div class="div-radio-button-content">
+                    <img src="./img/liso.png" alt="cabelo liso" />
+                    <span>Liso</span>
+                  </div>
+                </label>
+              </div>
+              <div class="div-radio-button">
+                <input
+                  type="radio"
+                  id="ondulado"
+                  name="tipo-de-cabelo"
+                  value="ondulado"
+                />
+                <label for="ondulado">
+                  <div class="div-radio-button-content">
+                    <img src="./img/ondulado.png" alt="cabelo ondulado" />
+                    <span>Ondulado/ Cacheado</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="radio"
+                  id="crespo"
+                  name="tipo-de-cabelo"
+                  value="crespo"
+                />
+                <label for="crespo">
+                  <div class="div-radio-button-content">
+                    <img src="./img/crespo.png" alt="cabelo crespo" />
+                    <span>Crespo</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="radio"
+                  id="curto"
+                  name="tipo-de-cabelo"
+                  value="curto"
+                />
+                <label for="curto">
+                  <div class="div-radio-button-content">
+                    <img src="./img/curto.png" alt="cabelo curto" />
+                    <span>Muito curto</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="div-botao">
+            <button type="button" class="botao-guia botao-guia-anterior">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>ANTERIOR
+            </button>
+            <button type="button" class="botao-guia botao-guia-proximo">
+              PRÓXIMO <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+
+            <div class="alerta">Este campo é obrigatório</div>
+          </div>
+        </div>
+
+        <div class="box oculta">
+          <div class="div-pergunta">
+            <p>Marque aqui que tipo de química você tem nos seus fios:</p>
+            <span>Escolha as opções que se aplicam</span>
+
+            <div class="all-radios">
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="coloracao"
+                  name="quimica"
+                  value="coloracao"
+                />
+                <label for="coloracao">
+                  <div class="div-radio-button-content">
+                    <img
+                      src="./img/coloracao.png"
+                      alt="coloração ou tonalizantes"
+                    />
+                    <span>Coloração e/ou tonalizantes</span>
+                  </div>
+                </label>
+              </div>
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="loiros"
+                  name="quimica"
+                  value="loiros"
+                />
+                <label for="loiros">
+                  <div class="div-radio-button-content">
+                    <img src="./img/loiros.png" alt="loiros" />
+                    <span>Loiros ou descoloridos</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="alisamento"
+                  name="quimica"
+                  value="alisamento"
+                />
+                <label for="alisamento">
+                  <div class="div-radio-button-content">
+                    <img
+                      src="./img/alisamento.png"
+                      alt="alisamento ou progressiva"
+                    />
+                    <span>Alisamento ou progressiva</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="alongamento-queratina"
+                  name="quimica"
+                  value="alongamento-queratina"
+                />
+                <label for="alongamento-queratina">
+                  <div class="div-radio-button-content">
+                    <img
+                      src="./img/alongamento-queratina.png"
+                      alt="alongamento de queratina"
+                    />
+                    <span>Alongamento de queratina ou ponto americano</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="alongamento-fita"
+                  name="quimica"
+                  value="alongamento-fita"
+                />
+                <label for="alongamento-fita">
+                  <div class="div-radio-button-content">
+                    <img src="./img/fita.png" alt="alongamento com fita" />
+                    <span>Alongamento com fita</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="sem-quimica"
+                  name="quimica"
+                  value="sem-quimica"
+                />
+                <label for="sem-quimica">
+                  <div class="div-radio-button-content">
+                    <img src="./img/sem-quimica.png" alt="sem química" />
+                    <span>Sem química</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="div-botao">
+            <button type="button" class="botao-guia botao-guia-anterior">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>ANTERIOR
+            </button>
+
+            <button type="button" class="botao-guia botao-guia-proximo">
+              PRÓXIMO <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+            <div class="alerta">Este campo é obrigatório</div>
+          </div>
+        </div>
+
+        <div class="box oculta">
+          <div class="div-pergunta">
+            <p>Como você sente sua raiz?</p>
+            <span>Escolha uma opção</span>
+
+            <div class="all-radios">
+              <div class="div-radio-button">
+                <input
+                  type="radio"
+                  id="raiz-oleosa"
+                  name="tipo-de-raiz"
+                  value="raiz-oleosa"
+                />
+                <label for="raiz-oleosa">
+                  <div class="div-radio-button-content">
+                    <img src="./img/curtoolioso.png" alt="raiz oleosa" />
+                    <span
+                      >Raiz oleosa (precisa lavar diariamente ou quase
+                      diariamente)</span
+                    >
+                  </div>
+                </label>
+              </div>
+              <div class="div-radio-button">
+                <input
+                  type="radio"
+                  id="raiz-normal"
+                  name="tipo-de-raiz"
+                  value="raiz-normal"
+                />
+                <label for="raiz-normal">
+                  <div class="div-radio-button-content">
+                    <img src="./img/deboas.png" alt="raiz normal" />
+                    <span
+                      >Raiz normal (geralmente fica bonito no dia seguinte a
+                      lavagem)</span
+                    >
+                  </div>
+                </label>
+              </div>
+              <div class="div-radio-button">
+                <input
+                  type="radio"
+                  id="raiz_coceira_descamacao"
+                  name="tipo-de-raiz"
+                  value="raiz_coceira_descamacao"
+                />
+                <label for="raiz_coceira_descamacao">
+                  <div class="div-radio-button-content">
+                    <img src="./img/coceira.png" alt="coceira e descamação" />
+                    <span
+                      >Couro cabeludo apresenta descamação, coceira, ardência,
+                      sensibilidade</span
+                    >
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="div-botao">
+            <button type="button" class="botao-guia botao-guia-anterior">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>ANTERIOR
+            </button>
+
+            <button type="button" class="botao-guia botao-guia-proximo">
+              PRÓXIMO <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+            <div class="alerta">Este campo é obrigatório</div>
+          </div>
+        </div>
+
+        <div class="box oculta">
+          <div class="div-pergunta">
+            <p>Seus fios são como?</p>
+            <span>Escolha uma opção</span>
+
+            <div class="all-radios">
+              <div class="div-radio-button">
+                <input
+                  type="radio"
+                  id="fio-ressecado"
+                  name="tipo-de-fio"
+                  value="fio-ressecado"
+                />
+                <label for="fio-ressecado">
+                  <div class="div-radio-button-content">
+                    <img src="./img/ressecamento.png" alt="fio ressecado" />
+                    <span> Ressecados </span>
+                  </div>
+                </label>
+              </div>
+              <div class="div-radio-button">
+                <input
+                  type="radio"
+                  id="fio-normal"
+                  name="tipo-de-fio"
+                  value="fio-normal"
+                />
+                <label for="fio-normal">
+                  <div class="div-radio-button-content">
+                    <img src="./img/deboas.png" alt="fio normal" />
+                    <span>Normal</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="radio"
+                  id="fio-curto"
+                  name="tipo-de-fio"
+                  value="fio-curto"
+                />
+                <label for="fio-curto">
+                  <div class="div-radio-button-content">
+                    <img src="./img/curtoolioso.png" alt="fio curto" />
+                    <span>Curtos com raiz oleosa</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="radio"
+                  id="fio-nao-hidratado"
+                  name="tipo-de-fio"
+                  value="fio-nao-hidratado"
+                />
+                <label for="fio-nao-hidratado">
+                  <div class="div-radio-button-content">
+                    <img src="./img/naohidra.png" alt="fio não hidratado" />
+                    <span>Não hidrato os fios</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="div-botao">
+            <button type="button" class="botao-guia botao-guia-anterior">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>ANTERIOR
+            </button>
+
+            <button type="button" class="botao-guia botao-guia-proximo">
+              PRÓXIMO <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+            <div class="alerta">Este campo é obrigatório</div>
+          </div>
+        </div>
+
+        <div class="box oculta">
+          <div class="div-pergunta">
+            <p>Seu estilo de vida:</p>
+            <span>Escolha as opções que se aplicam</span>
+
+            <div class="all-radios">
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="carne"
+                  name="estilo-de-vida"
+                  value="carne"
+                />
+                <label for="carne">
+                  <div class="div-radio-button-content">
+                    <img src="./img/carne.png" alt="come carne" />
+                    <span>Como Carne Vermelha</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="nao-come-carne"
+                  name="estilo-de-vida"
+                  value="nao-come-carne"
+                />
+                <label for="nao-come-carne">
+                  <div class="div-radio-button-content">
+                    <img src="./img/vege.png" alt="nenhuma proteína animal" />
+                    <span>Não come proteína animal</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="atividade-fisica"
+                  name="estilo-de-vida"
+                  value="atividade-fisica"
+                />
+                <label for="atividade-fisica">
+                  <div class="div-radio-button-content">
+                    <img src="./img/fisi.png" alt="atividade física" />
+                    <span>Faço atividade física</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="dorme"
+                  name="estilo-de-vida"
+                  value="dorme"
+                />
+                <label for="dorme">
+                  <div class="div-radio-button-content">
+                    <img src="./img/dormindo.png" alt="dorme" />
+                    <span>Durmo Bem</span>
+                  </div>
+                </label>
+              </div>
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="nenhum"
+                  name="nenhum"
+                  value="nenhum"
+                />
+                <label for="nenhum">
+                  <div class="div-radio-button-content">
+                    <img src="./img/nenhuma.png" alt="dorme" />
+                    <span>Nenhuma das opções</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="div-botao">
+            <button type="button" class="botao-guia botao-guia-anterior">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>ANTERIOR
+            </button>
+
+            <button type="button" class="botao-guia botao-guia-proximo">
+              PRÓXIMO <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+            <div class="alerta">Este campo é obrigatório</div>
+          </div>
+        </div>
+
+        <div class="box oculta">
+          <div class="div-pergunta">
+            <p>Opções se aplicam para o seu momento:</p>
+            <span>Escolha as opções que se aplicam</span>
+
+            <div class="all-radios">
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="tireoide"
+                  name="momento"
+                  value="tireoide"
+                />
+                <label for="tireoide">
+                  <div class="div-radio-button-content">
+                    <img src="./img/tireoide.png" alt="tireoide" />
+                    <span>Doença da tireoide</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="ovario"
+                  name="momento"
+                  value="ovario"
+                />
+                <label for="ovario">
+                  <div class="div-radio-button-content">
+                    <img src="./img/ovario.png" alt="ovário" />
+                    <span>Ovário policístico</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="menopausa"
+                  name="momento"
+                  value="menopausa"
+                />
+                <label for="menopausa">
+                  <div class="div-radio-button-content">
+                    <img src="./img/menopausa.png" alt="menopausa" />
+                    <span>Menopausa/ Andropausa</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="hormonios"
+                  name="momento"
+                  value="hormonios"
+                />
+                <label for="hormonios">
+                  <div class="div-radio-button-content">
+                    <img src="./img/hormonios.png" alt="hormônios" />
+                    <span>Reposição hormonal, uso de chips hormonais</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="estresse"
+                  name="momento"
+                  value="estresse"
+                />
+                <label for="estresse">
+                  <div class="div-radio-button-content">
+                    <img src="./img/estresse.png" alt="estresse" />
+                    <span>Estresse</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="anemia"
+                  name="momento"
+                  value="anemia"
+                />
+                <label for="anemia">
+                  <div class="div-radio-button-content">
+                    <img src="./img/anemia.png" alt="anemia" />
+                    <span>Anemia</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="doenca-autoimune"
+                  name="momento"
+                  value="doenca-autoimune"
+                />
+                <label for="doenca-autoimune">
+                  <div class="div-radio-button-content">
+                    <img
+                      src="./img/doenca-autoimune.png"
+                      alt="doença autoimune"
+                    />
+                    <span>Doenças autoimunes</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="medicamentos"
+                  name="momento"
+                  value="medicamentos"
+                  onclick="addMedicamentoQuestionBox(this)"
+                />
+                <label for="medicamentos">
+                  <div class="div-radio-button-content">
+                    <img src="./img/medicamentos.png" alt="medicamentos" />
+                    <span>Uso contínuo de medicamento</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="pos-parto"
+                  name="momento"
+                  value="pos-parto"
+                />
+                <label for="pos-parto">
+                  <div class="div-radio-button-content">
+                    <img src="./img/pos-parto.png" alt="pós parto" />
+                    <span>Pós parto</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="amamentando"
+                  name="momento"
+                  value="amamentando"
+                />
+                <label for="amamentando">
+                  <div class="div-radio-button-content">
+                    <img src="./img/amamentando.png" alt="amamentando" />
+                    <span>Amamentando</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="anestesia"
+                  name="momento"
+                  value="anestesia"
+                />
+                <label for="anestesia">
+                  <div class="div-radio-button-content">
+                    <img src="./img/anestesia.png" alt="anestesia" />
+                    <span>Tomou anestesia nos últimos 6 meses</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="cirurgia"
+                  name="momento"
+                  value="cirurgia"
+                />
+                <label for="cirurgia">
+                  <div class="div-radio-button-content">
+                    <img src="./img/cirurgia.png" alt="cirurgia" />
+                    <span>Cirurgia de redução de estômago</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="transplante-capilar"
+                  name="momento"
+                  value="transplante-capilar"
+                />
+                <label for="transplante-capilar">
+                  <div class="div-radio-button-content">
+                    <img
+                      src="./img/transplante-capilar.png"
+                      alt="transplante capilar"
+                    />
+                    <span>Transplante capilar</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="cabelo-preso"
+                  name="momento"
+                  value="cabelo-preso"
+                />
+                <label for="cabelo-preso">
+                  <div class="div-radio-button-content">
+                    <img src="./img/cabelo-preso.png" alt="cabelo preso" />
+                    <span>Prende cabelo molhado</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="dormindo"
+                  name="momento"
+                  value="dormindo"
+                />
+                <label for="dormindo">
+                  <div class="div-radio-button-content">
+                    <img src="./img/dormindo.png" alt="dormindo" />
+                    <span>Dorme com o cabelo molhado</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="oleos-cremes"
+                  name="momento"
+                  value="oleos-cremes"
+                />
+                <label for="oleos-cremes">
+                  <div class="div-radio-button-content">
+                    <img src="./img/oleos-cremes.png" alt="óleos e cremes" />
+                    <span
+                      >Usa óleos, cremes de pentear, máscaras no couro
+                      cabeludo</span
+                    >
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="praia"
+                  name="momento"
+                  value="praia"
+                />
+                <label for="praia">
+                  <div class="div-radio-button-content">
+                    <img src="./img/praia.png" alt="praia" />
+                    <span>Frequenta praia ou piscina regularmente</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input type="checkbox" id="gel" name="momento" value="gel" />
+                <label for="gel">
+                  <div class="div-radio-button-content">
+                    <img src="./img/oleo.png" alt="gel e pomadas" />
+                    <span>Uso de gel e pomada frequente</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input type="checkbox" id="fuma" name="momento" value="fuma" />
+                <label for="fuma">
+                  <div class="div-radio-button-content">
+                    <img src="./img/cigarro.png" alt="fuma" />
+                    <span>Fuma</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="infeccao"
+                  name="momento"
+                  value="infeccao"
+                />
+                <label for="infeccao">
+                  <div class="div-radio-button-content">
+                    <img src="./img/virus.png" alt="infecção" />
+                    <span>Teve alguma infecção nos últimos 6 meses</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="div-radio-button">
+                <input
+                  type="checkbox"
+                  id="nenhuma-opcao"
+                  name="momento"
+                  value="nenhuma-opcao"
+                />
+                <label for="nenhuma-opcao">
+                  <div class="div-radio-button-content">
+                    <img
+                      src="./img/nenhum-problema.png"
+                      alt="nenhum problema"
+                    />
+                    <span>Nenhuma das opções</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="div-botao">
+            <button type="button" class="botao-guia botao-guia-anterior">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>ANTERIOR
+            </button>
+
+            <button type="button" class="botao-guia botao-guia-proximo">
+              PRÓXIMO <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+            <div class="alerta">Este campo é obrigatório</div>
+          </div>
+        </div>
+
+        <div class="oculta" id="div-medicamentos-tomados">
+          <div class="div-pergunta">
+            <p>Qual medicamento você toma?</p>
+
+            <input
+              type="text"
+              name="medicamento-usado"
+              id="medicamento-usado"
+            />
+          </div>
+
+          <div class="div-botao">
+            <button type="button" class="botao-guia botao-guia-anterior">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>ANTERIOR
+            </button>
+
+            <button type="button" class="botao-guia botao-guia-proximo">
+              PRÓXIMO <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+            <div class="alerta">Este campo é obrigatório</div>
+          </div>
+        </div>
+
+        <div class="box oculta">
+          <div class="div-pergunta">
+            <p>O que você deseja para seu cabelo?</p>
+            <span>Escolha as opções que se aplicam</span>
+
+            <div class="all-radios">
+              <div class="div-checkbox-button">
+                <input
+                  type="checkbox"
+                  id="crescimento"
+                  name="desejo"
+                  value="crescimento"
+                />
+                <label for="crescimento">
+                  <span>Crescimento</span>
+                </label>
+              </div>
+
+              <div class="div-checkbox-button">
+                <input
+                  type="checkbox"
+                  id="hidratacao"
+                  name="desejo"
+                  value="hidratacao"
+                />
+                <label for="hidratacao">
+                  <span>Hidratação</span>
+                </label>
+              </div>
+
+              <div class="div-checkbox-button">
+                <input
+                  type="checkbox"
+                  id="controle-de-oleosidade"
+                  name="desejo"
+                  value="controle-de-oleosidade"
+                />
+                <label for="controle-de-oleosidade">
+                  <span>Controle de oleosidade</span>
+                </label>
+              </div>
+
+              <div class="div-checkbox-button">
+                <input
+                  type="checkbox"
+                  id="reparacao-imediata"
+                  name="desejo"
+                  value="reparacao-imediata"
+                />
+                <label for="reparacao-imediata">
+                  <span>Reparação imediata</span>
+                </label>
+              </div>
+
+              <div class="div-checkbox-button">
+                <input
+                  type="checkbox"
+                  id="fortificacao-fios"
+                  name="desejo"
+                  value="fortificacao-fios"
+                />
+                <label for="fortificacao-fios">
+                  <span>Fortificação dos fios</span>
+                </label>
+              </div>
+
+              <div class="div-checkbox-button">
+                <input
+                  type="checkbox"
+                  id="anti-frizz"
+                  name="desejo"
+                  value="anti-frizz"
+                />
+                <label for="anti-frizz">
+                  <span>Anti frizz ou redução do volume</span>
+                </label>
+              </div>
+
+              <div class="div-checkbox-button">
+                <input
+                  type="checkbox"
+                  id="prevencao-queda"
+                  name="desejo"
+                  value="prevencao-queda"
+                />
+                <label for="prevencao-queda">
+                  <span>Prevenção de queda/ quebra</span>
+                </label>
+              </div>
+
+              <div class="div-checkbox-button">
+                <input
+                  type="checkbox"
+                  id="controle-descamacao"
+                  name="desejo"
+                  value="controle-descamacao"
+                />
+                <label for="controle-descamacao">
+                  <span>Controle de descamação</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="div-botao">
+            <button type="button" class="botao-guia botao-guia-anterior">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>ANTERIOR
+            </button>
+
+            <button type="button" class="botao-guia botao-guia-proximo">
+              PRÓXIMO <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+            <div class="alerta">Este campo é obrigatório</div>
+          </div>
+        </div>
+
+        <div class="box oculta">
+          <div class="div-pergunta">
+            <p>Receba seu cronograma no e-mail para tê-lo sempre com você!</p>
+            <label for="nome">Qual seu nome?</label>
+            <input
+              type="text"
+              name="nome"
+              id="nome"
+              placeholder="Digite seu nome..."
+              required
+            />
+            <label for="email">Qual seu email?</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Digite seu e-mail..."
+              required
+            />
+          </div>
+
+          <div class="div-botao">
+            <button type="button" class="botao-guia botao-guia-anterior">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>ANTERIOR
+            </button>
+
+            <button type="submit" class="botao-guia" id="botao-enviar">
+              CLIQUE NO BOTÃO PARA ENVIAR
+            </button>
+            <div class="alerta">Este campo é obrigatório</div>
+          </div>
+        </div>
+      </form>
+
+      <div class="resultados oculta">
+        <div id="close-button">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <p>
+          De acordo com suas respostas, esses são os produtos indicados para
+          você:
+        </p>
+        <div class="produtos">
+          <div class="card-produto oculta" id="proteinas">
+            <img src="./img/proteinas.jpg" alt="proteína" />
+            <span>PROTEÍNA (Pré Shampoo)</span>
+          </div>
+          <div class="card-produto oculta" id="vitaminas-homem">
+            <img src="./img/vitaminas-homem.jpg" alt="vitamina" />
+            <span>NUTRIÇÃO CAPILAR MASCULINA - VITAMINA/GROW MAN</span>
+          </div>
+          <div class="card-produto oculta" id="vitaminas-mulher">
+            <img src="./img/vitaminas-mulher.jpg" alt="vitamina" />
+            <span>NUTRIÇÃO CAPILAR FEMININA - VITAMINA/GROW WOMAN</span>
+          </div>
+
+          <div class="card-produto oculta" id="energyPower">
+            <img src="./img/energyPower.jpg" alt="energy power" />
+            <span>ENERGY POWER DOSE</span>
+          </div>
+          <div class="card-produto oculta" id="tonico">
+            <img src="./img//tonico.jpg" alt="tônico" />
+            <span>TÔNICO </span>
+          </div>
+          <div class="card-produto oculta" id="shampooCremeDeLimpeza3Em1">
+            <img
+              src="./img/shampooCremeDeLimpeza3Em1.jpg"
+              alt="creme de limpeza"
+            />
+            <span
+              >CREME DE LIMPEZA 3 EM 1
+              <p>Antes do shampoo estimulante na mesma lavagem.</p>
+            </span>
+          </div>
+
+          <div class="card-produto oculta" id="shampooEstimulante">
+            <img src="./img/shampooEstimulante.jpg" alt="shampoo estimulante" />
+            <span>SHAMPOO TERAPIA ESTIMULANTE/STIMULATING THERAPY</span>
+          </div>
+          <div class="card-produto oculta" id="shampooDanificados">
+            <img src="./img/shampooDanificados.jpg" alt="shampoo danificados" />
+            <span>SHAMPOO CABELOS DANIFICADOS/DAMAGED HAIR</span>
+          </div>
+          <div class="card-produto oculta" id="shampooCabelosSecosESensiveis">
+            <img
+              src="./img/shampooCabelosSecosESensiveis.jpg"
+              alt="shampoo cabelos secos"
+            />
+            <span
+              >SHAMPOO CABELOS SECOS E SENSÍVEIS/DRY AND SENSITIVE HAIR</span
+            >
+          </div>
+
+          <div class="card-produto oculta" id="shampooNeutrum">
+            <img src="./img/shampooNeutrum.jpg" alt="shampoo neutro" />
+            <span>SHAMPOO NEUTRO/NEUTRUM</span>
+          </div>
+          <div class="card-produto oculta" id="shampooEnergizante">
+            <img src="./img/shampooEnergizante.jpg" alt="shampoo energizante" />
+            <span>SHAMPOO ENERGIZANTE</span>
+          </div>
+          <div class="card-produto oculta" id="shampooGreasyHair">
+            <img src="./img/shampooGreasyHair.jpg" alt="shampoo greasy hair" />
+            <span>SHAMPOO CABELOS OLEOSOS/ GREASY HAIR</span>
+          </div>
+
+          <div class="card-produto oculta" id="condicionadorEnergizante">
+            <img
+              src="./img/condicionadorEnergizante.jpg"
+              alt="condicionador energizante"
+            />
+            <span>CONDICIONADOR ENERGIZANTE</span>
+          </div>
+
+          <div class="card-produto oculta" id="condicionadorNeutrum">
+            <img
+              src="./img/condicionadorNeutrum.jpg"
+              alt="condicionador neutro"
+            />
+            <span>NEUTRUM CONDICIONADOR</span>
+          </div>
+          <div class="card-produto oculta" id="condicionadorHydrabalm">
+            <img
+              src="./img/condicionadorHydrabalm.jpg"
+              alt="condicionador hydra balm"
+            />
+            <span>CONDICIONADOR HYDRA BALM</span>
+          </div>
+          <div class="card-produto oculta" id="condicionadorEstimulante">
+            <img
+              src="./img/condicionadorEstimulante.jpg"
+              alt="condicionador estimulante"
+            />
+            <span>CONDICIONADOR ESTIMULANTE</span>
+          </div>
+
+          <div class="card-produto oculta" id="condicionadorOleosos">
+            <img
+              src="./img/condicionadorOleosos.jpg"
+              alt="condicionador oleosos"
+            />
+            <span>CONDICIONADOR CABELOS OLEOSOS/ GREASY HAIR</span>
+          </div>
+
+          <div class="card-produto oculta" id="condicionadorDanificados">
+            <img
+              src="./img/condicionadorDanificados.jpg"
+              alt="condicionador danificados"
+            />
+            <span>CONDICIONADOR DAMAGED HAIR</span>
+          </div>
+          <div class="card-produto oculta" id="mascaraDanificados">
+            <img src="./img/mascaraDanificados.jpg" alt="máscara danificados" />
+            <span>MÁSCARA CABELOS DANIFICADOS</span>
+          </div>
+
+          <div class="card-produto oculta" id="mascaraHydraBalm">
+            <img src="./img/mascaraHydraBalm.jpg" alt="máscara hydra balm" />
+            <span>MÁSCARA HYDRA BALM</span>
+          </div>
+
+          <div class="card-produto oculta" id="mascaraRefreshScalpTherapy">
+            <img
+              src="./img/mascaraRefreshScalpTherapy.jpg"
+              alt="máscara refresh scalp"
+            />
+            <span>MÁSCARA REFRESH SCALP THERAPY </span>
+          </div>
+          <div class="card-produto oculta" id="leaveIn">
+            <img src="./img/leaveIn.jpg" alt="leave in" />
+            <span>LEAVE IN</span>
+          </div>
+          <div class="card-produto oculta" id="kitSOS">
+            <img src="./img/kitSOS.jpg" alt="kit SOS" />
+            <span>KIT SOS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./script/script.js"></script>
+  </body>
+</html>
